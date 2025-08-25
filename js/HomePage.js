@@ -1,9 +1,9 @@
 import { createPost } from "./createNewPost.js";
-import { getNews } from "js/fetchNews.js";
+import { getNews } from "./fetchNews.js";
 
 // load the home page including a header,a list of preview article cards and a footer 
 
-export function LoadHomePage(cardsArr = 5) {
+export async function LoadHomePage(cardsArr = 5) {
 
     createHeader();
     createFooter();
@@ -14,7 +14,7 @@ export function LoadHomePage(cardsArr = 5) {
 
     // destructing article details from fetched news & appending to the cards container
     for (let i = 0; i < cardsArr; i++) {
-        const news = getNews();
+        const news = await getNews();
         for (let article of news) {
             const { author, title, urlToImg } = article;
             const articleCard = createPreviewArticleCard(author, title, urlToImg);
