@@ -2,7 +2,7 @@
 
 // load the home page including a header,a list of preview article cards and a footer 
 
-function LoadHomePage(cardsArr = 5) {
+export function LoadHomePage(cardsArr = 5) {
     createHeader();
     createFooter();
     const cardsContainer = document.createElement('div')
@@ -15,7 +15,7 @@ function LoadHomePage(cardsArr = 5) {
 }
 
 // // create and append a header within a nav bar 
-function createHeader() {
+export function createHeader() {
 
     const header = document.createElement("header");
 
@@ -92,7 +92,7 @@ function createHeader() {
 
 
 // // create a perview article card for homepage display 
-function createPreviewArticleCard(author, title, imageUrl) {
+export function createPreviewArticleCard(author, title, imageUrl) {
     // Main card container
     const card = document.createElement("div");
     card.className = "news-card";
@@ -122,7 +122,7 @@ function createPreviewArticleCard(author, title, imageUrl) {
 }
 
 // create and append a footer 
-function createFooter() {
+export function createFooter() {
     const footer = document.createElement('footer');
     //contact us
     const contactUsWrapper = document.createElement('div');
@@ -151,4 +151,4 @@ function createFooter() {
 
 }
 
-// LoadHomePage();
+LoadHomePage();
