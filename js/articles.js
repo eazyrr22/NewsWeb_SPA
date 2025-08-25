@@ -1,9 +1,14 @@
+ import { createFooter, createHeader } from "./HomePage.js";
 
-function loadNews(){
-    
+export function loadArticle(header,description,content,urlImg){
+    // create and append elements to the body
+    createHeader()
+    createArticle(header,description,content,urlImg)
+    createFooter()
 }
 
-function createArticle(header,description,content,urlImg) {
+
+export function createArticle(header,description,content,urlImg) {
     // Create article
     const article = document.createElement("article");
 
