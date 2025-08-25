@@ -15,80 +15,80 @@ function LoadHomePage(cardsArr = 5) {
 }
 
 // // create and append a header within a nav bar 
-// function createHeader() {
+function createHeader() {
 
-//     const header = document.createElement("header");
+    const header = document.createElement("header");
 
-//     // Logo row
-//     const logoRow = document.createElement("div");
-//     logoRow.className = "logo-row";
+    // Logo row
+    const logoRow = document.createElement("div");
+    logoRow.className = "logo-row";
 
-//     const logo = document.createElement("img");
-//     // logo.src = "https://via.placeholder.com/120x50?text=Logo";
-//     logo.alt = "Site Logo";
+    const logo = document.createElement("img");
+    // logo.src = "https://via.placeholder.com/120x50?text=Logo";
+    logo.alt = "Site Logo";
 
-//     logoRow.appendChild(logo);
-//     header.appendChild(logoRow);
+    logoRow.appendChild(logo);
+    header.appendChild(logoRow);
 
 
-//     const nav = document.createElement("nav");
-//     nav.className = "header-nav";
+    const nav = document.createElement("nav");
+    nav.className = "header-nav";
 
-//     // Login
-//     const loginDiv = document.createElement("div");
-//     loginDiv.className = "nav-item";
+    // Login
+    const loginDiv = document.createElement("div");
+    loginDiv.className = "nav-item";
 
-//     const loginA = document.createElement("a");
-//     loginA.href = "#login";
-//     loginA.textContent = "Login";
+    const loginA = document.createElement("a");
+    loginA.href = "#login";
+    loginA.textContent = "Login";
 
-//     const loginImg = document.createElement("img");
-//     // loginImg.src = "https://via.placeholder.com/40?text=👤";
-//     loginImg.alt = "Login";
+    const loginImg = document.createElement("img");
+    // loginImg.src = "https://via.placeholder.com/40?text=👤";
+    loginImg.alt = "Login";
 
-//     loginDiv.appendChild(loginA);
-//     loginDiv.appendChild(loginImg);
+    loginDiv.appendChild(loginA);
+    loginDiv.appendChild(loginImg);
 
-//     // Posts
-//     const postsDiv = document.createElement("div");
-//     postsDiv.className = "nav-item";
+    // Posts
+    const postsDiv = document.createElement("div");
+    postsDiv.className = "nav-item";
 
-//     const postsA = document.createElement("a");
-//     postsA.href = "#posts";
-//     postsA.textContent = "Posts";
+    const postsA = document.createElement("a");
+    postsA.href = "#posts";
+    postsA.textContent = "Posts";
 
-//     const postsImg = document.createElement("img");
-//     // postsImg.src = "https://via.placeholder.com/40?text=📝";
-//     postsImg.alt = "Posts";
+    const postsImg = document.createElement("img");
+    // postsImg.src = "https://via.placeholder.com/40?text=📝";
+    postsImg.alt = "Posts";
 
-//     postsDiv.appendChild(postsA);
-//     postsDiv.appendChild(postsImg);
+    postsDiv.appendChild(postsA);
+    postsDiv.appendChild(postsImg);
 
-//     // Add Post
-//     const addPostDiv = document.createElement("div");
-//     addPostDiv.className = "nav-item";
+    // Add Post
+    const addPostDiv = document.createElement("div");
+    addPostDiv.className = "nav-item";
 
-//     const addPostA = document.createElement("a");
-//     addPostA.href = "#addpost";
-//     addPostA.textContent = "Add Post";
+    const addPostA = document.createElement("a");
+    addPostA.href = "#addpost";
+    addPostA.textContent = "Add Post";
 
-//     const addPostImg = document.createElement("img");
-//     // addPostImg.src = "https://via.placeholder.com/40?text=➕";
-//     addPostImg.alt = "Add Post";
+    const addPostImg = document.createElement("img");
+    // addPostImg.src = "https://via.placeholder.com/40?text=➕";
+    addPostImg.alt = "Add Post";
 
-//     addPostDiv.appendChild(addPostA);
-//     addPostDiv.appendChild(addPostImg);
+    addPostDiv.appendChild(addPostA);
+    addPostDiv.appendChild(addPostImg);
 
-//     // Put everything into nav
-//     nav.appendChild(loginDiv);
-//     nav.appendChild(postsDiv);
-//     nav.appendChild(addPostDiv);
+    // Put everything into nav
+    nav.appendChild(loginDiv);
+    nav.appendChild(postsDiv);
+    nav.appendChild(addPostDiv);
 
-//     // Append nav to header
-//     header.appendChild(nav);
+    // Append nav to header
+    header.appendChild(nav);
 
-//     document.body.appendChild(header);
-// }
+    document.body.appendChild(header);
+}
 
 
 // // create a perview article card for homepage display 
