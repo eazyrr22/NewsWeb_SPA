@@ -1,6 +1,5 @@
-import { createHeader,createFooter } from "./HomePage";
 
-export function addPost(){
+export function createPost(){
     // create and send form
 const form = document.createElement("form");
 
