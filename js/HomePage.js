@@ -2,17 +2,17 @@
 
 // load the home page including a header,a list of preview article cards and a footer 
 
-// function LoadHomePage(cardsArr = 5) {
-//     createHeader();
-//     createFooter();
-//     const cardsContainer = document.createElement('div')
-//     for (let i = 0; i < cardsArr; i++) {
-//         //const data = fetch() - fetch news data from web using api key + formating to a json to destruct easily
-//         cardsContainer.appendChild(createPreviewArticleCard(author = 0, title = 0, imageUrl = 0))
+function LoadHomePage(cardsArr = 5) {
+    createHeader();
+    createFooter();
+    const cardsContainer = document.createElement('div')
+    for (let i = 0; i < cardsArr; i++) {
+        //const data = fetch() - fetch news data from web using api key + formating to a json to destruct easily
+        cardsContainer.appendChild(createPreviewArticleCard(author = 0, title = 0, imageUrl = 0))
 
-//     }
-//     document.body.appendChild(cardsContainer);
-// }
+    }
+    document.body.appendChild(cardsContainer);
+}
 
 // // create and append a header within a nav bar 
 // function createHeader() {
