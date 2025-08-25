@@ -92,34 +92,34 @@
 
 
 // // create a perview article card for homepage display 
-// function createPreviewArticleCard(author, title, imageUrl) {
-//     // Main card container
-//     const card = document.createElement("div");
-//     card.className = "news-card";
+function createPreviewArticleCard(author, title, imageUrl) {
+    // Main card container
+    const card = document.createElement("div");
+    card.className = "news-card";
 
-//     // Author div
-//     const authorDiv = document.createElement("div");
-//     authorDiv.className = "news-author";
-//     authorDiv.textContent = author;
+    // Author div
+    const authorDiv = document.createElement("div");
+    authorDiv.className = "news-author";
+    authorDiv.textContent = author;
 
-//     // Title div
-//     const titleDiv = document.createElement("div");
-//     titleDiv.className = "news-title";
-//     titleDiv.textContent = title;
+    // Title div
+    const titleDiv = document.createElement("div");
+    titleDiv.className = "news-title";
+    titleDiv.textContent = title;
 
-//     // Image element
-//     const img = document.createElement("img");
-//     img.className = "news-image";
-//     // img.src = imageUrl;
-//     img.alt = title;
+    // Image element
+    const img = document.createElement("img");
+    img.className = "news-image";
+    // img.src = imageUrl;
+    img.alt = title;
 
-//     // Put everything inside the card
-//     card.appendChild(authorDiv);
-//     card.appendChild(titleDiv);
-//     card.appendChild(img);
+    // Put everything inside the card
+    card.appendChild(authorDiv);
+    card.appendChild(titleDiv);
+    card.appendChild(img);
 
-//     return card;
-// }
+    return card;
+}
 
 // create and append a footer 
 function createFooter() {
