@@ -1,20 +1,31 @@
-
+import { createPost } from "./createNewPost.js";
+import { getNews } from "js/fetchNews.js";
 
 // load the home page including a header,a list of preview article cards and a footer 
 
 export function LoadHomePage(cardsArr = 5) {
+
     createHeader();
     createFooter();
-    const cardsContainer = document.createElement('div')
-    for (let i = 0; i < cardsArr; i++) {
-        //const data = fetch() - fetch news data from web using api key + formating to a json to destruct easily
-        cardsContainer.appendChild(createPreviewArticleCard(author = 0, title = 0, imageUrl = 0))
 
+    // cards container wrapper
+    const cardsContainer = document.createElement('div')
+    cardsContainer.className = 'cards_container';
+
+    // destructing article details from fetched news & appending to the cards container
+    for (let i = 0; i < cardsArr; i++) {
+        const news = getNews();
+        for (let article of news) {
+            const { author, title, urlToImg } = article;
+            const articleCard = createPreviewArticleCard(author, title, urlToImg);
+            cardsContainer.appendChild(articleCard);
+        }
     }
     document.body.appendChild(cardsContainer);
 }
 
-// // create and append a header within a nav bar 
+// create and append a header contaoning a nav bar in 
+
 export function createHeader() {
 
     const header = document.createElement("header");
@@ -90,8 +101,8 @@ export function createHeader() {
     document.body.appendChild(header);
 }
 
+// create a perview article card for homepage display 
 
-// // create a perview article card for homepage display 
 export function createPreviewArticleCard(author, title, imageUrl) {
     // Main card container
     const card = document.createElement("div");
@@ -110,7 +121,7 @@ export function createPreviewArticleCard(author, title, imageUrl) {
     // Image element
     const img = document.createElement("img");
     img.className = "news-image";
-    // img.src = imageUrl;
+    img.src = imageUrl;
     img.alt = title;
 
     // Put everything inside the card
@@ -122,6 +133,7 @@ export function createPreviewArticleCard(author, title, imageUrl) {
 }
 
 // create and append a footer 
+
 export function createFooter() {
     const footer = document.createElement('footer');
     //contact us
@@ -152,3 +164,4 @@ export function createFooter() {
 }
 
 LoadHomePage();
+document.body.appendChild(createPost())
