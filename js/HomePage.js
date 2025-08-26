@@ -3,7 +3,7 @@ import { getNews } from "./fetchNews.js";
 
 // load the home page including a header,a list of preview article cards and a footer 
 
-export async function LoadHomePage(cardsArr = 5) {
+export async function LoadHomePage() {
 
     createHeader();
     createFooter();
@@ -12,15 +12,15 @@ export async function LoadHomePage(cardsArr = 5) {
     const cardsContainer = document.createElement('div')
     cardsContainer.className = 'cards_container';
 
-    // destructing article details from fetched news & appending to the cards container
-    for (let i = 0; i < cardsArr; i++) {
-        const news = await getNews();
+    const news = await getNews();
+
+    // destructing article details from fetched news & appending to the cards container       
         for (let article of news) {
             const { author, title, urlToImg } = article;
             const articleCard = createPreviewArticleCard(author, title, urlToImg);
             cardsContainer.appendChild(articleCard);
         }
-    }
+
     document.body.appendChild(cardsContainer);
 }
 
